@@ -1,0 +1,56 @@
+C:\Users\Guillaume\Documents\SkeletonBasics-WPF\obj\Debug\SkeletonBasics-WPF.csprojResolveAssemblyReference.cache
+C:\Users\Guillaume\Documents\SkeletonBasics-WPF\obj\Debug\MainWindow.baml
+C:\Users\Guillaume\Documents\SkeletonBasics-WPF\obj\Debug\MainWindow.g.cs
+C:\Users\Guillaume\Documents\SkeletonBasics-WPF\obj\Debug\App.g.cs
+C:\Users\Guillaume\Documents\SkeletonBasics-WPF\obj\Debug\SkeletonBasics-WPF_MarkupCompile.cache
+C:\Users\Guillaume\Documents\SkeletonBasics-WPF\obj\Debug\SkeletonBasics-WPF.g.resources
+C:\Users\Guillaume\Documents\SkeletonBasics-WPF\obj\Debug\Microsoft.Samples.Kinect.SkeletonBasics.Properties.Resources.resources
+C:\Users\Guillaume\Documents\SkeletonBasics-WPF\obj\Debug\SkeletonBasics-WPF.csproj.GenerateResource.Cache
+C:\Users\Guillaume\Documents\SkeletonBasics-WPF\bin\Debug\SkeletonBasics-WPF.exe
+C:\Users\Guillaume\Documents\SkeletonBasics-WPF\bin\Debug\SkeletonBasics-WPF.pdb
+C:\Users\Guillaume\Documents\SkeletonBasics-WPF\bin\Debug\Microsoft.Kinect.dll
+C:\Users\Guillaume\Documents\SkeletonBasics-WPF\bin\Debug\Microsoft.Kinect.xml
+C:\Users\Guillaume\Documents\SkeletonBasics-WPF\obj\Debug\SkeletonBasics-WPF.exe
+C:\Users\Guillaume\Documents\SkeletonBasics-WPF\obj\Debug\SkeletonBasics-WPF.pdb
+C:\Users\Florentin-IMERIR\Desktop\Maker Faire\Projet ARM\branches\C#\Kinect\SkeletonBasics-WPF\bin\Debug\SkeletonBasics-WPF.exe
+C:\Users\Florentin-IMERIR\Desktop\Maker Faire\Projet ARM\branches\C#\Kinect\SkeletonBasics-WPF\bin\Debug\SkeletonBasics-WPF.pdb
+C:\Users\Florentin-IMERIR\Desktop\Maker Faire\Projet ARM\branches\C#\Kinect\SkeletonBasics-WPF\bin\Debug\Microsoft.Kinect.dll
+C:\Users\Florentin-IMERIR\Desktop\Maker Faire\Projet ARM\branches\C#\Kinect\SkeletonBasics-WPF\bin\Debug\Microsoft.Kinect.xml
+C:\Users\Florentin-IMERIR\Desktop\Maker Faire\Projet ARM\branches\C#\Kinect\SkeletonBasics-WPF\obj\Debug\SkeletonBasics-WPF.csprojResolveAssemblyReference.cache
+C:\Users\Florentin-IMERIR\Desktop\Maker Faire\Projet ARM\branches\C#\Kinect\SkeletonBasics-WPF\obj\Debug\MainWindow.baml
+C:\Users\Florentin-IMERIR\Desktop\Maker Faire\Projet ARM\branches\C#\Kinect\SkeletonBasics-WPF\obj\Debug\MainWindow.g.cs
+C:\Users\Florentin-IMERIR\Desktop\Maker Faire\Projet ARM\branches\C#\Kinect\SkeletonBasics-WPF\obj\Debug\App.g.cs
+C:\Users\Florentin-IMERIR\Desktop\Maker Faire\Projet ARM\branches\C#\Kinect\SkeletonBasics-WPF\obj\Debug\SkeletonBasics-WPF_MarkupCompile.cache
+C:\Users\Florentin-IMERIR\Desktop\Maker Faire\Projet ARM\branches\C#\Kinect\SkeletonBasics-WPF\obj\Debug\SkeletonBasics-WPF.g.resources
+C:\Users\Florentin-IMERIR\Desktop\Maker Faire\Projet ARM\branches\C#\Kinect\SkeletonBasics-WPF\obj\Debug\Microsoft.Samples.Kinect.SkeletonBasics.Properties.Resources.resources
+C:\Users\Florentin-IMERIR\Desktop\Maker Faire\Projet ARM\branches\C#\Kinect\SkeletonBasics-WPF\obj\Debug\SkeletonBasics-WPF.csproj.GenerateResource.Cache
+C:\Users\Florentin-IMERIR\Desktop\Maker Faire\Projet ARM\branches\C#\Kinect\SkeletonBasics-WPF\obj\Debug\SkeletonBasics-WPF.exe
+C:\Users\Florentin-IMERIR\Desktop\Maker Faire\Projet ARM\branches\C#\Kinect\SkeletonBasics-WPF\obj\Debug\SkeletonBasics-WPF.pdb
+C:\Users\Guillaume\Desktop\SkeletonBasics-WPF\obj\Debug\SkeletonBasics-WPF.exe
+C:\Users\Guillaume\Desktop\SkeletonBasics-WPF\obj\Debug\SkeletonBasics-WPF.pdb
+C:\Users\Guillaume\Desktop\SkeletonBasics-WPF\bin\Debug\SkeletonBasics-WPF.exe
+C:\Users\Guillaume\Desktop\SkeletonBasics-WPF\bin\Debug\SkeletonBasics-WPF.pdb
+C:\Users\Guillaume\Desktop\SkeletonBasics-WPF\bin\Debug\Microsoft.Kinect.dll
+C:\Users\Guillaume\Desktop\SkeletonBasics-WPF\bin\Debug\Microsoft.Kinect.xml
+C:\Users\Guillaume\Desktop\SkeletonBasics-WPF\obj\Debug\SkeletonBasics-WPF.csprojResolveAssemblyReference.cache
+C:\Users\Guillaume\Desktop\SkeletonBasics-WPF\obj\Debug\MainWindow.baml
+C:\Users\Guillaume\Desktop\SkeletonBasics-WPF\obj\Debug\MainWindow.g.cs
+C:\Users\Guillaume\Desktop\SkeletonBasics-WPF\obj\Debug\App.g.cs
+C:\Users\Guillaume\Desktop\SkeletonBasics-WPF\obj\Debug\SkeletonBasics-WPF_MarkupCompile.cache
+C:\Users\Guillaume\Desktop\SkeletonBasics-WPF\obj\Debug\SkeletonBasics-WPF.g.resources
+C:\Users\Guillaume\Desktop\SkeletonBasics-WPF\obj\Debug\Microsoft.Samples.Kinect.SkeletonBasics.Properties.Resources.resources
+C:\Users\Guillaume\Desktop\SkeletonBasics-WPF\obj\Debug\SkeletonBasics-WPF.csproj.GenerateResource.Cache
+C:\Users\Guillaume\Desktop\ARM\branches\C#\Kinect\SkeletonBasics-WPF\obj\Debug\SkeletonBasics-WPF.exe
+C:\Users\Guillaume\Desktop\ARM\branches\C#\Kinect\SkeletonBasics-WPF\obj\Debug\SkeletonBasics-WPF.pdb
+C:\Users\Guillaume\Desktop\ARM\branches\C#\Kinect\SkeletonBasics-WPF\bin\Debug\SkeletonBasics-WPF.exe
+C:\Users\Guillaume\Desktop\ARM\branches\C#\Kinect\SkeletonBasics-WPF\bin\Debug\SkeletonBasics-WPF.pdb
+C:\Users\Guillaume\Desktop\ARM\branches\C#\Kinect\SkeletonBasics-WPF\bin\Debug\Microsoft.Kinect.dll
+C:\Users\Guillaume\Desktop\ARM\branches\C#\Kinect\SkeletonBasics-WPF\bin\Debug\Microsoft.Kinect.xml
+C:\Users\Guillaume\Desktop\ARM\branches\C#\Kinect\SkeletonBasics-WPF\obj\Debug\SkeletonBasics-WPF.csprojResolveAssemblyReference.cache
+C:\Users\Guillaume\Desktop\ARM\branches\C#\Kinect\SkeletonBasics-WPF\obj\Debug\MainWindow.baml
+C:\Users\Guillaume\Desktop\ARM\branches\C#\Kinect\SkeletonBasics-WPF\obj\Debug\MainWindow.g.cs
+C:\Users\Guillaume\Desktop\ARM\branches\C#\Kinect\SkeletonBasics-WPF\obj\Debug\App.g.cs
+C:\Users\Guillaume\Desktop\ARM\branches\C#\Kinect\SkeletonBasics-WPF\obj\Debug\SkeletonBasics-WPF_MarkupCompile.cache
+C:\Users\Guillaume\Desktop\ARM\branches\C#\Kinect\SkeletonBasics-WPF\obj\Debug\SkeletonBasics-WPF.g.resources
+C:\Users\Guillaume\Desktop\ARM\branches\C#\Kinect\SkeletonBasics-WPF\obj\Debug\Microsoft.Samples.Kinect.SkeletonBasics.Properties.Resources.resources
+C:\Users\Guillaume\Desktop\ARM\branches\C#\Kinect\SkeletonBasics-WPF\obj\Debug\SkeletonBasics-WPF.csproj.GenerateResource.Cache

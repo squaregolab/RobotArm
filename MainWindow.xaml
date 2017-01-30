@@ -1,0 +1,107 @@
+﻿<Window x:Class="Microsoft.Samples.Kinect.SkeletonBasics.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Contrôle d'un bras robotique via un kinect" Height="753" Width="1328.05" Loaded="WindowLoaded" Closing="WindowClosing">
+
+    <Window.Resources>
+        <SolidColorBrush x:Key="MediumGreyBrush" Color="#ff6e6e6e"/>
+        <SolidColorBrush x:Key="KinectPurpleBrush" Color="#ff52318f"/>
+        <SolidColorBrush x:Key="KinectBlueBrush" Color="#ff00BCF2"/>
+        <Style TargetType="{x:Type Image}">
+            <Setter Property="SnapsToDevicePixels" Value="True"/>
+        </Style>
+        <Style TargetType="{x:Type CheckBox}" x:Key="SquareCheckBox" >
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type CheckBox}">
+                        <Grid>
+                            <StackPanel Orientation="Horizontal" Background="Transparent">
+                                <Grid x:Name="SquareCheckBoxChecked">
+                                    <Image x:Name="CheckedNormal" Source="Images\CheckedNormal.png" Stretch="None" HorizontalAlignment="Center"/>
+                                    <Image x:Name="CheckedHover" Source="Images\CheckedHover.png" Stretch="None" HorizontalAlignment="Center" Visibility="Collapsed"/>
+                                </Grid>
+                                <Grid x:Name="SquareCheckBoxUnchecked" Visibility="Collapsed">
+                                    <Image x:Name="UncheckedNormal" Source="Images\UncheckedNormal.png" Stretch="None" HorizontalAlignment="Center"/>
+                                    <Image x:Name="UncheckedHover" Source="Images\UncheckedHover.png" Stretch="None" HorizontalAlignment="Center" Visibility="Collapsed"/>
+                                </Grid>
+                                <TextBlock x:Name="SquareCheckBoxText" Text="{TemplateBinding Content}" TextAlignment="Left"  VerticalAlignment="Center" Foreground="{StaticResource KinectPurpleBrush}" FontSize="15"  Margin="9,0,0,0"/>
+                            </StackPanel>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsChecked" Value="false">
+                                <Setter Property="Visibility" Value="Collapsed" TargetName="SquareCheckBoxChecked"/>
+                                <Setter Property="Visibility" Value="Visible" TargetName="SquareCheckBoxUnchecked"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="Visibility" Value="Collapsed" TargetName="CheckedNormal"/>
+                                <Setter Property="Visibility" Value="Collapsed" TargetName="UncheckedNormal"/>
+                                <Setter Property="Visibility" Value="Visible" TargetName="CheckedHover"/>
+                                <Setter Property="Visibility" Value="Visible" TargetName="UncheckedHover"/>
+                                <Setter Property="Foreground" Value="{StaticResource KinectBlueBrush}" TargetName="SquareCheckBoxText"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
+    <Grid Name="layoutGrid" Margin="10,0,0,0" HorizontalAlignment="Left" Width="1302">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="169*"/>
+            <ColumnDefinition Width="265*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <DockPanel Grid.Row="0" Margin="0 0 0 20" Grid.ColumnSpan="2">
+            <Image DockPanel.Dock="Left" Source="Images\Logo.png" Stretch="Fill" Height="32" Width="81" Margin="0 10 0 5"/>
+            <Image Grid.Column="1" Source="Images\Status.png" Stretch="None" HorizontalAlignment="Center" Margin="0 0 0 5"/>
+        </DockPanel>
+        <Viewbox Grid.Row="1" Stretch="Uniform" HorizontalAlignment="Center" Grid.Column="1" Margin="144,0,651,0"/>
+        <CheckBox Grid.Row="2" Style="{StaticResource SquareCheckBox}" Content="Kinect Mode" Height="Auto" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,10,386,10" Name="checkBoxSeatedMode" Checked="CheckBoxSeatedModeChanged" Unchecked="CheckBoxSeatedModeChanged" KeyDown="checkBoxSeatedMode_KeyDown"/>
+        <StatusBar Grid.Row="3" HorizontalAlignment="Stretch" Name="statusBar" VerticalAlignment="Bottom" Background="White" Foreground="{StaticResource MediumGreyBrush}" Grid.ColumnSpan="2">
+            <StatusBarItem Padding="0 0 0 10">
+                <Label x:Name="lblangle" Content="By Florentin DION and Guillaume DUPLOUICH - 2017"/>
+            </StatusBarItem>
+        </StatusBar>
+        <Image x:Name="Image" Margin="0,0,623,0" Grid.Row="1" Grid.ColumnSpan="2" KeyDown="Image_KeyDown"/>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="576" Margin="177,0,0,0" Grid.Row="1" Stroke="Black" VerticalAlignment="Top" Width="618" Grid.Column="1" RenderTransformOrigin="0.531,0.464"/>
+        <ComboBox x:Name="cbPorts" HorizontalAlignment="Left" Margin="306,24,0,0" Grid.Row="1" VerticalAlignment="Top" Width="100" Grid.Column="1"/>
+        <ComboBox x:Name="cbBaudRate" HorizontalAlignment="Left" Margin="428,24,0,0" Grid.Row="1" VerticalAlignment="Top" Width="100" Grid.Column="1"/>
+        <ComboBox x:Name="cbDataBits" HorizontalAlignment="Left" Margin="554,24,0,0" Grid.Row="1" VerticalAlignment="Top" Width="100" Grid.Column="1"/>
+        <ComboBox x:Name="cbHandShaking" HorizontalAlignment="Left" Margin="680,24,0,0" Grid.Row="1" VerticalAlignment="Top" Width="100" Grid.Column="1"/>
+        <ComboBox x:Name="cbParity" HorizontalAlignment="Left" Margin="306,69,0,0" Grid.Row="1" VerticalAlignment="Top" Width="101" Grid.Column="1"/>
+        <ComboBox x:Name="cbStopBits" HorizontalAlignment="Left" Margin="428,69,0,0" Grid.Row="1" VerticalAlignment="Top" Width="100" Grid.Column="1"/>
+        <CheckBox x:Name="chkBlocagePoignet" Content="Bloquer" Grid.Column="1" HorizontalAlignment="Left" Margin="214,331,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        <CheckBox x:Name="chkMode180" Content="Mode 180°" Grid.Column="1" HorizontalAlignment="Left" Margin="351,490,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        <Label x:Name="lblIntervalTemps" Content="100" Grid.Column="1" HorizontalAlignment="Left" Height="29" Margin="395,418,0,0" Grid.Row="1" VerticalAlignment="Top" Width="44"/>
+        <TextBox x:Name="txtMessage" HorizontalAlignment="Left" Height="22" Margin="548,69,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="100" Grid.Column="1"/>
+        <CheckBox x:Name="chkTimerInterval" Grid.Column="1" HorizontalAlignment="Left" Margin="241,422,0,0" Grid.Row="1" VerticalAlignment="Top" Height="16" Width="120" Checked="chkTimerInterval_Checked" Content="Interval de temps"/>
+        <Slider x:Name="sldTimerInterval" Grid.Column="1" HorizontalAlignment="Left" Margin="211,443,0,0" Grid.Row="1" VerticalAlignment="Top" Width="246" Maximum="1000" Minimum="100" SmallChange="50" TickFrequency="50" Value="100" TickPlacement="BottomRight" Interval="50" ValueChanged="sldTimerInterval_ValueChanged"/>
+        <Button x:Name="btnSend" Content="Envoyer une position" Grid.Column="1" HorizontalAlignment="Left" Margin="235,511,0,0" Grid.Row="1" VerticalAlignment="Top" Width="187" Height="37" Click="btnSend_Click_1"/>
+        <CheckBox x:Name="chkSend" Content="Envoie en continu" Grid.Column="1" HorizontalAlignment="Left" Margin="235,490,0,0" Grid.Row="1" VerticalAlignment="Top" RenderTransformOrigin="-2.463,0.438" Checked="chkSend_Checked"/>
+        <RadioButton x:Name="rbtOpened" Content="Ouverte" Grid.Column="1" HorizontalAlignment="Left" Margin="303,360,0,0" Grid.Row="1" VerticalAlignment="Top" IsChecked="True"/>
+        <RadioButton x:Name="rbtClosed" Content="Fermée" Grid.Column="1" HorizontalAlignment="Left" Margin="303,380,0,0" Grid.Row="1" VerticalAlignment="Top" RenderTransformOrigin="0.231,-2.875" />
+        <Label x:Name="label1" Content="Main :" Grid.Column="1" HorizontalAlignment="Left" Margin="210,354,0,0" Grid.Row="1" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.538"/>
+        <Slider x:Name="sldWrist" Grid.Column="1" HorizontalAlignment="Left" Margin="287,305,0,0" Grid.Row="1" VerticalAlignment="Top" Width="170" Minimum="500" Maximum="2500" Value="1500"/>
+        <Slider x:Name="sldElbow" Grid.Column="1" HorizontalAlignment="Left" Margin="287,253,0,0" Grid.Row="1" VerticalAlignment="Top" Width="170" Minimum="500" Maximum="2500" Value="500"/>
+        <Slider x:Name="sldShoulder" Grid.Column="1" HorizontalAlignment="Left" Margin="287,201,0,0" Grid.Row="1" VerticalAlignment="Top" Width="170" Value="500" Maximum="2500" Minimum="500"/>
+        <Slider x:Name="sldHip" Grid.Column="1" HorizontalAlignment="Left" Margin="287,148,0,0" Grid.Row="1" VerticalAlignment="Top" Width="170" Minimum="500" Maximum="2500" Value="500"/>
+        <Label x:Name="label1_Copy" Content="Poignet :" Grid.Column="1" HorizontalAlignment="Left" Margin="210,301,0,0" Grid.Row="1" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.538"/>
+        <Label x:Name="label1_Copy1" Content="Coude :" Grid.Column="1" HorizontalAlignment="Left" Margin="210,249,0,0" Grid.Row="1" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.538"/>
+        <Label x:Name="label1_Copy2" Content="Epaule :" Grid.Column="1" HorizontalAlignment="Left" Margin="210,197,0,0" Grid.Row="1" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.538"/>
+        <Label x:Name="label1_Copy3" Content="Hanche :" Grid.Column="1" HorizontalAlignment="Left" Margin="211,144,0,0" Grid.Row="1" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.538"/>
+        <Button x:Name="btnPorts" Content="Obtenir ports" Grid.Column="1" HorizontalAlignment="Left" Margin="197,24,0,0" Grid.Row="1" VerticalAlignment="Top" Width="85" Click="btnPorts_Click" Height="67"/>
+        <Rectangle Grid.Column="1" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="1" Margin="177,119,0,0" Grid.Row="1" Stroke="Black" VerticalAlignment="Top" Width="618"/>
+        <Rectangle Grid.Column="1" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="439" Margin="491,119,0,0" Grid.Row="1" Stroke="Black" VerticalAlignment="Top" Width="1"/>
+        <ListBox x:Name="lstData" Grid.Column="1" HorizontalAlignment="Left" Height="395" Margin="491,181,0,0" Grid.Row="1" VerticalAlignment="Top" Width="304" Background="WhiteSmoke" BorderBrush="#FF1B1C1D"/>
+        <Label x:Name="label2" Content="Données utiles :" Grid.Column="1" HorizontalAlignment="Left" Margin="492,119,0,0" Grid.Row="1" VerticalAlignment="Top" Height="62" Width="303" VerticalContentAlignment="Center" FontSize="24"/>
+        <Button x:Name="btnMessage" Content="Send text" Grid.Column="1" HorizontalAlignment="Left" Margin="680,69,0,0" Grid.Row="1" VerticalAlignment="Top" Width="100" Click="btnMessage_Click"/>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="67" Margin="667,0,0,0" VerticalAlignment="Top" Width="113" Source="Images/logonu.bmp" SnapsToDevicePixels="False" Stretch="Fill" Grid.Column="1" RenderTransformOrigin="0.106,0.284"/>
+        <Label x:Name="label" Content="IMERIR" Grid.Column="1" HorizontalAlignment="Left" Height="52" Margin="559,7,0,0" VerticalAlignment="Top" Width="127" VerticalContentAlignment="Center" FontSize="34"/>
+    </Grid>
+</Window>
