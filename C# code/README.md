@@ -3,6 +3,7 @@
 
 ######*Kinect*
 >1.Le squelette 
+>
 >Le Kinect détecte les articulations de l'utilisateur et les dessines à l'écran.
 >Il relie ensuite chaque articulations entre elles pour réaliser le squelette.
 >
@@ -11,6 +12,7 @@
 >:warning:Les valeurs prisent sont comprisent entre -1 et 1. Les coordonnées {0 ; 0 ; 0} sont le centre de l'image.
 >
 >2.Les angles
+>
 >Pour calculer les angles, nous utilisons l'une des formules d'Al Kashi, [*la loi des Cosinus*](http://villemin.gerard.free.fr/GeomLAV/Triangle/Calcul/RelQuel.htm#cosinus).
 >
 >Les angles du poignet, coude et épaule utilise les coordonnées {x ; y}, et l'angle de la hanche {x ; z}.
@@ -18,6 +20,7 @@
 
 ######*Myo*
 >1.Mouvements
+>
 >Le bracelet détecte les mouvements du muscle de l'avant-bras. Il permet de détecter 5 mouvements différents :
 >- Ouvrir la main
 >- Fermer la main
@@ -26,6 +29,7 @@
 >- Double "tap" des doigts
 >
 >2.Gestion du mouvement dans le code
+>
 >Le bracelet détectant plus ou moins bien les 2 premiers mouvements cités, nous avons opté sur le double "tap" pour ouvrir et fermer la main.
 >Pour gérer ce mouvement dans le code, nous utilisons le logiciel de Myo et mappons une touche du clavier sur ce mouvement.
 >A chaque fois que le mouvement est réalisé, la touche est simulé à l'ordinateur. La touche pressé est donc détecté par le programme qui va envoyé l'information au bras d'ouvrir ou femrer sa main.
@@ -35,6 +39,7 @@
 
 ######*SSC-32U*
 >1.UART
+>
 >Le bras robotique est contrôlé par une carte électonique faites pour le contrôle de servomoteurs. Cette carte est la *SSC-32U*.
 >La communication entre la carte et le PC est série via USB. Plus précisemment :
 >- Baud Rate : 9600 (possibilité de le modifier)
@@ -44,12 +49,13 @@
 >- Bits de stop : 1
 >
 >2.Trame
+>
 >La carte contrôle les servomoteurs en fonction des trames reçues. La trame à envoyé suit le schéma suivant :     
 >`#[XX] P[YYYY] T[ZZZZ]`
 >
->-[XX]   : est le numéro du connectique du servomoteur à contrôler.
->-[YYYY] : est la position du servomoteur (compris entre 500 et 2500). 
->-[ZZZZ] : est le temps que met le servomoteur pour atteindre sa position (en milliseconde).
+>- [XX]   : est le numéro du connectique du servomoteur à contrôler.
+>- [YYYY] : est la position du servomoteur (compris entre 500 et 2500). 
+>- [ZZZZ] : est le temps que met le servomoteur pour atteindre sa position (en milliseconde).
 >
 >
 >Le schéma peut être répété pour chaque servomoteur en une seule trame. 
