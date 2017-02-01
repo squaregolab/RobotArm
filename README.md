@@ -1,5 +1,5 @@
 #**RobotArm - Drive a robot arm whith Kinect**
-##Code *Xaml* & *C#* pour contrôler le bras robotique avec un Kinect (xbox 360) et bracelet Myo.
+##Contrôle d'un bras robotique avec un Kinect et un Myo.
 
 ######Kinect
 Le Kinect est relié au PC. Les données récupérés pour le contrôle du bras sont les articulations.
